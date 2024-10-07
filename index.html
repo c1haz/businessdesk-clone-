@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NZX50 Carbon Insight</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    </style>
+</head>
+<body>  
+    <div class="content">
+    <!-- Main Navbar -->
+    <div class="red-line"></div>
+    <nav class="navbar navbar-dark">
+        <div class="container-fluid">
+            <!-- Left Navigation Controls -->
+            <div class="nav-controls d-flex align-items-center">
+                <button class="nav-control-btn" id="menuBtn">Menu</button>
+                <button class="nav-control-btn" id="searchBtn">Search</button>
+                <button class="nav-control-btn" id="homeBtn">Home</button>
+            </div>
+
+            <!-- Logo -->
+            <a class="logo" href="#">
+                <img src="logos/Untitled-1.png" alt="logo">
+            </a>
+
+            <!-- Right Navigation Controls -->
+            <div class="right-nav-controls d-flex align-items-center">
+                <a class="right-nav" href="#">About</a>
+                <a class="right-nav" href="#">Login</a>
+                <button class="subscribe-btn ms-2">Subscribe</button>
+            </div>
+        </div>
+
+        <!-- Search Dropdown -->
+        <div class="search-dropdown" id="searchDropdown">
+            <input type="text" class="search-input" placeholder="Search or ask question with '?'">
+        </div>
+    </nav>
+
+    <!-- Secondary Navigation -->
+    <div class="secondary-nav overflow-auto">
+        <div class="d-flex flex-nowrap">
+            <a class="nav-link" href="#">Rates</a>
+            <a class="nav-link" href="#">HOT TOPICS</a>
+            <a class="nav-link" href="#">Markets</a>
+            <a class="nav-link" href="#">Podcasts</a>
+            <a class="nav-link" href="#">Opinion</a>
+            <a class="nav-link" href="#">On the Money</a>
+            <a class="nav-link" href="#">Business</a>
+            <a class="nav-link" href="#">Economy</a>
+            <a class="nav-link" href="#">Finance</a>
+            <a class="nav-link" href="#">Primary Sector</a>
+            <a class="nav-link" href="#">Infrastructure</a>
+            <a class="nav-link" href="#">Investments</a>
+            <a class="nav-link" href="#">Public sector</a>
+            <a class="nav-link" href="#">Technology</a>
+            <a class="nav-link" href="#">Energy</a>
+            <a class="nav-link" href="#">Property</a>
+            <a class="nav-link" href="#">The Life</a>
+            <a class="nav-link" href="#">The Quiz</a>
+        </div>
+    </div>
+
+    <!-- Sidenav -->
+    <div class="sidenav" id="mySidenav">
+        <div class="sidenav-header">
+            <h5 class="mb-0">Menu</h5>
+            <button class="sidenav-close" id="closeBtn">&times;</button>
+        </div>
+        <input type="text" placeholder="Search or ask question with '?'">
+        <div class="mobile-nav-controls" style="display: none;">
+           
+           
+        </div>
+        <div class="p-3">
+            <!-- Sidenav content -->
+            <a class="nav-link text-dark" href="#">Home</a>
+            <a class="nav-link text-dark" href="#">All News</a>
+            <a class="nav-link text-dark" href="#">HOT TOPICS</a>
+            <a class="nav-link text-dark" href="#">Markets</a>
+            <a class="nav-link text-dark" href="#">Podcasts</a>
+            <a class="nav-link text-dark" href="#">Opinion</a>
+            <a class="nav-link text-dark" href="#">On the Money</a>
+            <a class="nav-link text-dark" href="#">Business</a>
+            <a class="nav-link text-dark" href="#">Economy</a>
+            <a class="nav-link text-dark" href="#">Finance</a>
+            <a class="nav-link text-dark" href="#">Primary Sector</a>
+            <a class="nav-link text-dark" href="#">Infrastructure </a>
+            <a class="nav-link text-dark" href="#">Investments </a>
+            <a class="nav-link text-dark" href="#">Public sector </a>
+            <a class="nav-link text-dark" href="#">Technology </a>
+            <a class="nav-link text-dark" href="#">Energy </a>
+            <a class="nav-link text-dark" href="#">Property </a>
+            <a class="nav-link text-dark" href="#">The Life</a>
+            <a class="nav-link text-dark" href="#">The Quiz</a>
+            
+        </div>
+    </div>
+
+   
+
+   
+    <script>
+
+        // Sidenav
+        const menuBtn = document.getElementById('menuBtn');
+        const sidenav = document.getElementById('mySidenav');
+        const closeBtn = document.getElementById('closeBtn');
+        const overlay = document.getElementById('overlay');
+
+        menuBtn.addEventListener('click', () => {
+            sidenav.classList.add('show');
+            overlay.classList.add('show');
+        });
+
+        function closeSidenav() {
+            sidenav.classList.remove('show');
+            overlay.classList.remove('show');
+        }
+
+        closeBtn.addEventListener('click', closeSidenav);
+        overlay.addEventListener('click', closeSidenav);
+
+     
+    </script>
+
+
+ <!-- Main Container -->
+ <div class="container-fluid">
+    <div class="row">
+        <!-- Main Content Area -->
+        <div class="col-12 col-lg-9 col-border-right">
+            <!-- Featured Article -->
+            <div class="row news-row">
+                <div class="col-12 order-1 order-md-0">
+                    <div class="card news-card news-first line-bottom">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-8 order-xl-2">
+                                    <img src="photos/GYsgudgaMAAkzvM.png" class="card-img" alt="Featured article">
+                                </div>
+                                <div class="col-xl-4 card-content mt-3">
+                                    <strong class="news-category mb-2 mx-1">
+                                        <a href="#">Sustainable Finance</a>
+                                    </strong>
+                                    <h2 class="card-title mb-2">
+                                        <a href="#">The NZX20's most (and not so) ambitious carbon reduction targets</a>
+                                    </h2>
+                                    <p class="card-text">
+                                        Auckland airport measures aircraft emissions but can't reduce them by itself.
+                                    </p>
+                                    <div class="news-author mt-2">
+                                        <a href="#" class="author"><strong>Greg Hurrell</strong></a>
+                                        <span class="news-date px-2">01 Dec 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Three Column News Cards -->
+<div class="row mt-4">
+    <!-- First Column -->
+    <div class="col-md-4 col-border-right">
+        <div class="card news-card">
+            <img src="photos/image2.webp" class="card-img-top mb-3" alt="News image">
+            <div class="card-body card-content">
+                <strong class="news-category mb-2">
+                    <a href="#" style="color: #D20000;">Opinion</a>
+                </strong>
+                <h4 class="card-title mb-2">
+                    <a href="#" class="text-new-red">Daniel Street:</a>
+                    <a href="#">ESG clauses in supply chains</a>
+                </h4>
+                <div class="news-author mt-2">
+                    <a href="#" class="author"><strong>Daniel Street</strong></a>
+                    <span class="news-date px-2">22 Nov 2023</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Column -->
+    <div class="col-md-4 col-border-right">
+        <div class="card news-card">
+            <img src="photos/image3.webp" class="card-img-top mb-3" alt="News image">
+            <div class="card-body card-content">
+                <strong class="news-category mb-2">
+                    <a href="#" style="color: gray;">Investigations</a>
+                    <a href="#" style="color: red;"> NZX50 Carbon Insight</a>
+                </strong>
+                <h4 class="card-title mb-2">
+                    <a href="#">NZX50: Who's cutting emissions the quickest?</a>
+                </h4>
+                <p>Contact Energy reduced its emissions intensity by 24% in one year.</p>
+                <div class="news-author mt-2">
+                    <a href="#" class="author"><strong>Murray Jones</strong></a>
+                    <span class="news-date px-2">16 Nov 2023</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Column -->
+    <div class="col-md-4 col-border-right">
+        <div class="card news-card">
+            <img src="photos/image4.webp" class="card-img-top mb-3" alt="News image">
+            <div class="card-body card-content">
+                <strong class="news-category mb-2">
+                    <a href="#" style="color: gray;">Investigations</a>
+                    <a href="#" style="color: red;"> NZX50 Carbon Insight</a>
+                </strong>
+                <h4 class="card-title mb-2">
+                    <a href="#">Rising emissions intensity isn't the full business story</a>
+                </h4>
+                <p>CNZX50 companies with rising emission intensities might just be reporting them better.</p>
+                <div class="news-author mt-2">
+                    <a href="#" class="author"><strong>Greg Hurrell</strong></a>
+                    <span class="news-date px-2">15 Nov 2023</span>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+
+            <!-- News Articles Section -->
+<div class="news-listing">
+    <!-- First Article -->
+    <div class="news-card">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="photos/mac.webp" class="img-fluid" alt="Woman with laptop">
+            </div>
+            <div class="col-md-8">
+                <div class="news-content">
+                    <div class="category">Editor's Picks</div>
+                    <h2 class="title">
+                        <a href="#">Climate reporting rules spark move to automated software platforms</a>
+                    </h2>
+                    <div class="meta">
+                        <span class="author">Greg Hurrell</span>
+                        <span class="date">09 Nov 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Article -->
+    <div class="news-card">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="photos/volvo.webp" class="img-fluid" alt="Construction workers">
+            </div>
+            <div class="col-md-8">
+                <div class="news-content">
+                    <div class="category">Investigations</div>
+                    <h2 class="title">
+                        <a href="#">Companies turn to tech for third-party emissions data</a>
+                    </h2>
+                    <div class="meta">
+                        <span class="author">Greg Hurrell</span>
+                        <span class="date">08 Nov 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Article -->
+    <div class="news-card">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="photos/bussiness.webp" class="img-fluid" alt="Business meeting">
+            </div>
+            <div class="col-md-8">
+                <div class="news-content">
+                    <div class="category">Sustainable Finance</div>
+                    <h2 class="title">
+                        <a href="#">Business coalition marks 3.6m tonne drop in emissions</a>
+                    </h2>
+                    <div class="meta">
+                        <span class="author">Greg Hurrell</span>
+                        <span class="date">07 Nov 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fourth Article -->
+    <div class="news-card">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="photos/stock1.webp" class="img-fluid" alt="Graph with arrow">
+            </div>
+            <div class="col-md-8">
+                <div class="news-content">
+                    <div class="category">Investigations</div>
+                    <h2 class="title">
+                        <a href="#">NZX50 Carbon Insight: which sector performed best?</a>
+                    </h2>
+                    <div class="meta">
+                        <span class="author">Murray Jones</span>
+                        <span class="date">01 Nov 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fifth Article -->
+<div class="news-card">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="photos/stock2.webp" class="img-fluid" alt="Graph with arrow">
+        </div>
+        <div class="col-md-8">
+            <div class="news-content">
+                <div class="category">Markets</div>
+                <h2 class="title">
+                    <a href="#">NZX50 Carbon Insight: What the data tells us </a>
+                </h2>
+                <div class="meta">
+                    <span class="author">Murray Jones</span>
+                    <span class="date">31 Oct 2023</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+       <!-- Sidebar -->
+<div class="col-12 col-lg-3">
+    <div class="sidebar-content">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb-nav">
+            <ul class="breadcrumb-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Markets</a></li>
+                <li>NZX50 Carbon Insight</li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <h1 class="article-title">NZX50 Carbon Insight</h1>
+        <p class="article-description">
+            At BusinessDesk, we wanted to cut through the claims, targets and potential greenwashing and look at how New Zealand's biggest businesses were performing in terms of their emissions reduction.
+        </p>
+
+        <!-- Author Card -->
+        <div class="author-card">
+            <div class="author-image">
+                <img src="photos/murray-jones-new.webp" alt="Murray Jones" class="rounded-circle">
+            </div>
+            <h2 class="author-name">Murray Jones</h2>
+            <p class="author-role">Journalist</p>
+            <p class="author-bio">
+                Murray Jones is an investigative journalist. His work has been published by the BBC, The Guardian and Al-Jazeera, and his research has been reported on in more than 60 countries. He was runner-up in the Gaby Rado New Journalist category at the Amnesty Media Awards 2022. He was part of the BBC Panorama team that has been nominated for best investigation and foreign reporting at the British Journalism Awards and the Rose d'Or for their exposure of alleged British war crimes in Afghanistan. He moved from the UK to Auckland in 2021. Follow him on Twitter here or connect with him on LinkedIn here.
+            </p>
+            <button class="follow-button">Follow author</button>
+            <p class="follow-note">Followers will be emailed articles by Murray</p>
+        </div>
+
+        <!-- Popular Articles -->
+        <div class="most-popular my-4 mt-md-0 mx-n3 mx-md-0">
+            <h5 class="title">Popular in NZX50 Carbon Insight</h5>
+            <hr class="border-soft">
+            <div class="list-item">
+                <div class="number">1</div>
+                <div class="text">
+                    <a class="link" href="#">NZX50 Carbon Insight: What the data tells us</a>
+                    <div class="author">Murray Jones • 8:17am</div>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="number">2</div>
+                <div class="text">
+                    <a class="link" href="#">NZX50 Carbon Insight: New reporting rules spark move to automated software platforms</a>
+                    <div class="author">Greg Hurrell • 6:22pm</div>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="number">3</div>
+                <div class="text">
+                    <a class="link" href="#">ESG clauses in supply chains soon to be a prerequisite</a>
+                    <div class="author">Daniel Street • 05 Oct</div>
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="number">4</div>
+                <div class="text">
+                    <a class="link" href="#">NZX50: Who's cutting emissions the quickest?</a>
+                    <div class="author">Murray Jones • 05 Oct</div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+</div>
+           <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-column">
+                    <div class="logo-img">
+                        <img src="logos/bd.svg" alt="logo2" >
+                    </div>
+                    <p>The BusinessDesk team keeps New Zealand informed on the latest financial, economic, property and stockmarket news.</p>
+                    <p class="small"> NZME Publishing Ltd 2023</p>
+                </div>
+                <div class="col-md-3 footer-column">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">HOT TOPICS</a></li>
+                        <li><a href="#">Markets</a></li>
+                        <li><a href="#">Podcasts</a></li>
+                        <li><a href="#">Opinion</a></li>
+                        <li><a href="#">On the Money</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Economy</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Primary Sector</a></li>
+                        <li><a href="#">Infrastructure</a></li>
+                        <li><a href="#">Investments</a></li>
+                        <li><a href="#">Public sector</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Energy</a></li>
+                        <li><a href="#">Property</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-column">
+                    <h5>About</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us & Our Team</a></li>
+                        <li><a href="#">Why Subscribe to BD?</a></li>
+                        <li><a href="#">Subscribe</a></li>
+                        <li><a href="#">Team Subscriptions</a></li>
+                        <li><a href="#">Editorial Guidelines & FAQ</a></li>
+                        <li><a href="#">Advertise with BusinessDesk</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-column">
+                    <h5>Contact</h5>
+                    <p>0800 00 22 96</p>
+                    <p>info@businessdesk.co.nz</p>
+                    <p><a href="#">Terms & Conditions</a></p>
+                    <p><a href="#">Ethics Policy</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                   
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    <div class="red-line"></div>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+ 
+</body>
+
+</html>
